@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML LR API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">   
+  
+</head>
+<body>
+  <div class="header">
+    Employee Salary Prediction Using Linear Regression
+    </div>
+ <div class="login">
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="YearsExperience" placeholder="Enter Years Of Experience" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Salary</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+   </div> 
+ <img src="{{url_for('static',filename='trainingset.png')}}" alt="train set">
+ <img src="{{url_for('static',filename='testset.png')}}" alt="test set">
+   <br>
+   <br>
+   <div class="detail">Documentation and Code at : <a href="https://github.com/Yogananth-r/Salary-Prediction-with-Linear-Regression" target="_blank">GitHub</a></div>
+   <br>
+    <div class="yogi">Contact : <a href="https://www.github.com/Yogananth-r" target="_blank">Yogananth R</a></div>
+</body>
+</html>
